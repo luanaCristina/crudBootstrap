@@ -6,9 +6,10 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node lambda/server.js",
+    "start:lambda": "netlify-lambda serve lambda",
     "dev": "nodemon server.js",
-    "start:lambda": "netlify-lambda serve src/lambda",
-    "build": "run-p build:**"
+    "build:lambda": "netlify-lambda build lambda",
+    "build": "node lambda/server.js build:**"
   },
   "keywords": [
     "crud"
