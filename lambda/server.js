@@ -32,7 +32,7 @@ app.get("/ler", (requisition, resposta)=> {
     resposta.send("olá gente!")
 })
 
-app.get("/index", (req, res) => {
+app.get("/", (req, res) => {
     res.render("index.ejs")
 })
 
