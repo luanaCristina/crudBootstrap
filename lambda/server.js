@@ -3,8 +3,8 @@ const app = express()
 const dotenv = require("dotenv")
 dotenv.config()
 const uri = process.env.DATABASE_URL
-const { MongoClient }= require('mongodb-legacy')
-const ObjectId = require('mongodb-legacy').ObjectId
+const { MongoClient }= require('mongodb')
+const ObjectId = require('mongodb').ObjectId
 
 //para conectar o nosso banco
 const client = new MongoClient(uri);
