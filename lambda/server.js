@@ -3,6 +3,7 @@ const app = express()
 const dotenv = require("dotenv")
 dotenv.config()
 const uri = process.env.DATABASE_URL
+const port = 3001
 const { MongoClient }= require('mongodb')
 const ObjectId = require('mongodb').ObjectId
 
@@ -23,10 +24,10 @@ app.use('/css', express.static(__dirname +'public/css'))
 app.use('/js', express.static(__dirname +'public/js'))
 app.use('/img', express.static(__dirname +'public/img'))
 
+app.listen(process.env.PORT || port, () => {
+    console.log(`app está rodando na porta ${port}`)
+  })
 
-app.listen(3001, function(){
-    console.log("o nosso servidor está rodando na porta 3001")
-})
 
 app.get("/ler", (requisition, resposta)=> {
     resposta.send("olá gente!")
