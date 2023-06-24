@@ -1,8 +1,8 @@
  [build]
   command = "npm run build"
   functions = "lambda/"
-  publish = "dist"
+  publish = "views/"
 
   [[redirects]]
   from = "/*"
-  to = "/show"
+  to = "/show.ejs"
