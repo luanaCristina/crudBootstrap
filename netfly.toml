@@ -1,4 +1,8 @@
-[build]
-Command = "npm run build"
-Functions = "lambda"
-Publish = "build"
+ [build]
+  command = "npm run build"
+  functions = "lambda/"
+  publish = "dist"
+
+  [[redirects]]
+  from = "/*"
+  to = "/show"
